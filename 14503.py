@@ -23,7 +23,7 @@ while True:
     if arr[r][c] == 0:
         continue
 
-    r, c = r - dr[d], c - dc[d]
+    r, c = r - dr[d], c - dc[d] # 원래 좌표로 돌려주는 과정
     flag=0
     for i in range(1,4):
         nd = (d - i + 4) % 4
