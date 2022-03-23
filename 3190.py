@@ -11,7 +11,6 @@ for _ in range(L):
     tmp1, tmp2 = input().split()
     change.append([int(tmp1), tmp2])
 
-length = 1
 hr, hc = 0, 0
 body = deque()
 body.append([0,0])
@@ -38,15 +37,12 @@ while True:
     body.append([nr, nc])
     if grid[nr][nc] == 1:
         grid[nr][nc] = 0
-        length += 1
     else:
         body.popleft()
 
     if idx < L and time == change[idx][0]:
         if change[idx][1] == 'L':
-            dir = dir - 1
-            if dir == -1:
-                dir = 3
+            dir = (dir + 3) % 4
         else:
             dir = (dir + 1) % 4
         idx += 1
