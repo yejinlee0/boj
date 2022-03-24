@@ -4,12 +4,6 @@ blue = [[0 for _ in range(6)] for _ in range(4)]
 green = [[0 for _ in range(4)] for _ in range(6)]
 score = 0
 
-'''
-t = 1: 크기가 1×1인 블록을 (x, y)에 놓은 경우
-t = 2: 크기가 1×2인 블록을 (x, y), (x, y+1)에 놓은 경우 가로
-t = 3: 크기가 2×1인 블록을 (x, y), (x+1, y)에 놓은 경우 세로
-'''
-
 for t, r, c in block:
     # blue에 블록 놓기
     if t == 1:
