@@ -35,7 +35,7 @@ def bfs(r,c,visited):
 
     return union, cnt, result//cnt
 
-locked = [[False for _ in range(n)] for _ in range(n)]
+locked = [[False for _ in range(n)] for _ in range(n)] ## 탐색은 했지만 인구 이동은 일어나지 않음
 day = 0
 while True:
     visited = [[False for _ in range(n)] for _ in range(n)]
